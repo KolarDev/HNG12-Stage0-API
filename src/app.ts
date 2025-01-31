@@ -1,13 +1,12 @@
 import path from "path";
-import express from "express";
-import { NextFunction, Request, Response, Express, Application } from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import morgan from "morgan";
 
 dotenv.config({ path: "./config.env" });
 
-const app: Application = express();
+const app = express();
 
 app.use(cors()); // Enable CORS for all routes
 
@@ -15,6 +14,16 @@ app.use(cors()); // Enable CORS for all routes
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+
+app.use(express.json());
+
+app.get("/", (req: Request, res: Response) => {
+  res.status(200).json({
+    status: "success",
+    message:
+      "Hello, Welcome to Kolar HNG12 internship stage0 project using TypeScript + Express!",
+  });
+});
 
 // Define the /api/v1/info route
 app.get("/api/v1/info", (_req: Request, res: Response) => {
