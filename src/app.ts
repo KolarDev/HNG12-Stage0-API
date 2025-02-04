@@ -17,13 +17,14 @@ if (process.env.NODE_ENV === "development") {
 
 app.use(express.json());
 
-app.get("/", (req: Request, res: Response) => {
-  res.status(200).json({
-    status: "success",
-    message:
-      "Hi 🖐, Welcome to Kolar HNG12 internship stage0 project using TypeScript + Express!",
-  });
-});
+// // Testing the home route
+// app.get("/", (req: Request, res: Response) => {
+//   res.status(200).json({
+//     status: "success",
+//     message:
+//       "Hi 🖐, Welcome to Kolar HNG12 internship stage0 project using TypeScript + Express!",
+//   });
+// });
 
 // Define the /api/v1/info route
 app.get("/api/v1/info", (_req: Request, res: Response) => {
