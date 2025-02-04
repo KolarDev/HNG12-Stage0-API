@@ -96,7 +96,7 @@ b. **Response:**
 {
 "email": "muhyideenabdulbasit11@gmail.com",
 "current_datetime": "2025-01-30T09:30:00Z",
-"github_url": "https://github.com/KolarDev/HNG12-Stage0-API.git"
+"github_url": "https://github.com/KolarDev/HNG12-Stage0-API"
 }
 
 ```

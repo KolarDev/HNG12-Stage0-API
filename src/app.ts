@@ -31,7 +31,7 @@ app.get("/api/v1/info", (_req: Request, res: Response) => {
   const response = {
     email: "muhyideenabdulbasit11@gmail.com",
     current_datetime: new Date().toISOString(),
-    github_url: "https://github.com/KolarDev/HNG12-Stage0-API.git",
+    github_url: "https://github.com/KolarDev/HNG12-Stage0-API",
   };
   res.status(200).json(response); // Send JSON response
 });
