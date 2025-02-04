@@ -18,7 +18,7 @@ app.use(express_1.default.json());
 app.get("/", (req, res) => {
     res.status(200).json({
         status: "success",
-        message: "Hello, Welcome to Kolar HNG12 internship stage0 project using TypeScript + Express!",
+        message: "Hi 🖐, Welcome to Kolar HNG12 internship stage0 project using TypeScript + Express!",
     });
 });
 // Define the /api/v1/info route
