@@ -6,14 +6,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
-const morgan_1 = __importDefault(require("morgan"));
+// import morgan from "morgan";
 dotenv_1.default.config({ path: "./config.env" });
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)()); // Enable CORS for all routes
-// Use morgan for logging HTTP requests (only in development)
-if (process.env.NODE_ENV === "development") {
-    app.use((0, morgan_1.default)("dev"));
-}
+// // Use morgan for logging HTTP requests (only in development)
+// if (process.env.NODE_ENV === "development") {
+//   app.use(morgan("dev"));
+// }
 app.use(express_1.default.json());
 app.get("/", (req, res) => {
     res.status(200).json({

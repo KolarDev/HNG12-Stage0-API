@@ -2,7 +2,7 @@ import path from "path";
 import express, { Request, Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-// import morgan from "morgan";
+import morgan from "morgan";
 
 dotenv.config({ path: "./config.env" });
 
@@ -10,10 +10,10 @@ const app = express();
 
 app.use(cors()); // Enable CORS for all routes
 
-// // Use morgan for logging HTTP requests (only in development)
-// if (process.env.NODE_ENV === "development") {
-//   app.use(morgan("dev"));
-// }
+// Use morgan for logging HTTP requests (only in development)
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+}
 
 app.use(express.json());
 
